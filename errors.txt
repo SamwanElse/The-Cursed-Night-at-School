@@ -1,0 +1,14 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 587: end of line expected.
+    show kevin with dissolve at left
+                             ^
+
+File "game/script.rpy", line 591: end of line expected.
+    show citra with dissolve at right
+                             ^
+
+Ren'Py Version: Ren'Py 8.0.1.22070801
+Sat Aug  6 18:57:01 2022
