@@ -1,98 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00gamemenu.rpy", line 170, in script
-    $ ui.interact()
-  File "renpy/common/00gamemenu.rpy", line 170, in <module>
-    $ ui.interact()
-  File "game/screens.rpy", line 868, in execute
-    screen preferences():
-  File "game/screens.rpy", line 868, in execute
-    screen preferences():
-  File "game/screens.rpy", line 872, in execute
-    use game_menu(_(""), scroll="viewport"):
-  File "game/screens.rpy", line 421, in execute
-    screen game_menu(title, scroll=None, yinitial=0.0):
-  File "game/screens.rpy", line 421, in execute
-    screen game_menu(title, scroll=None, yinitial=0.0):
-  File "game/screens.rpy", line 475, in execute
-    use navigation
-  File "game/screens.rpy", line 288, in execute
-    screen navigation():
-  File "game/screens.rpy", line 288, in execute
-    screen navigation():
-  File "game/screens.rpy", line 290, in execute
-    vbox:
-  File "game/screens.rpy", line 290, in keywords
-    vbox:
-  File "game/screens.rpy", line 293, in keywords
-    if main_menu:
-  File "game/screens.rpy", line 300, in keywords
-    else:
-  File "game/screens.rpy", line 302, in <module>
-    xpos gui.navigation.xpos
-AttributeError: 'StoreModule' object has no attribute 'navigation'
+  File "game/script.rpy", line 161, in script
+    show yerihappy at shake, center
+  File "game/script.rpy", line 161, in <module>
+    show yerihappy at shake, center
+NameError: name 'shake' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00gamemenu.rpy", line 170, in script
-    $ ui.interact()
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\ast.py", line 1131, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\python.py", line 1049, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00gamemenu.rpy", line 170, in <module>
-    $ ui.interact()
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 3377, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs) # type: ignore
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 3804, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\display\screen.py", line 451, in visit_all
-    callback(self)
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 3804, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\display\screen.py", line 462, in per_interact
-    self.update()
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\display\screen.py", line 653, in update
-    self.screen.function(**self.scope)
-  File "game/screens.rpy", line 868, in execute
-    screen preferences():
-  File "game/screens.rpy", line 868, in execute
-    screen preferences():
-  File "game/screens.rpy", line 872, in execute
-    use game_menu(_(""), scroll="viewport"):
-  File "game/screens.rpy", line 421, in execute
-    screen game_menu(title, scroll=None, yinitial=0.0):
-  File "game/screens.rpy", line 421, in execute
-    screen game_menu(title, scroll=None, yinitial=0.0):
-  File "game/screens.rpy", line 475, in execute
-    use navigation
-  File "game/screens.rpy", line 288, in execute
-    screen navigation():
-  File "game/screens.rpy", line 288, in execute
-    screen navigation():
-  File "game/screens.rpy", line 290, in execute
-    vbox:
-  File "game/screens.rpy", line 290, in keywords
-    vbox:
-  File "game/screens.rpy", line 293, in keywords
-    if main_menu:
-  File "game/screens.rpy", line 300, in keywords
-    else:
-  File "game/screens.rpy", line 302, in <module>
-    xpos gui.navigation.xpos
-AttributeError: 'StoreModule' object has no attribute 'navigation'
+  File "game/script.rpy", line 161, in script
+    show yerihappy at shake, center
+  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\ast.py", line 1408, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\ast.py", line 1367, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\ast.py", line 1367, in <listcomp>
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\python.py", line 1080, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\python.py", line 1073, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 161, in <module>
+    show yerihappy at shake, center
+NameError: name 'shake' is not defined
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.1.22070801
 The Cursed Night at School 1.0
-Sat Aug  6 08:32:27 2022
+Wed Aug 10 22:17:02 2022

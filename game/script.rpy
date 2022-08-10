@@ -4,13 +4,22 @@
 # cnth. image eileen happy = "eileen_happy.png"
 
 #transform
-transform shake:
+transform long_shake:
     ease .06 yoffset 24
     ease .06 yoffset -24
     ease .05 yoffset 20
     ease .05 yoffset -20
     ease .04 yoffset 16
     ease .04 yoffset -16
+    ease .03 yoffset 12
+    ease .03 yoffset -12
+    ease .02 yoffset 8
+    ease .02 yoffset -8
+    ease .01 yoffset 4
+    ease .01 yoffset -4
+    ease .01 yoffset 0
+
+transform short_shake:
     ease .03 yoffset 12
     ease .03 yoffset -12
     ease .02 yoffset 8
@@ -34,13 +43,25 @@ image bg cntn = "images/canteen.jpg"
 #zaky
 image zaky = "images/zaky/Zaky.png"
 #kevin
-image kevin = "images/kevin/Kevin.png"
+image kevincheerful = "images/kevin/KevinCheerful.png"
+image kevinhappy = "images/kevin/KevinHappy.png"
+image kevinserious = "images/kevin/KevinSerious.png"
+image kevinsmile = "images/kevin/KevinSmile.png"
+image kevintalk = "images/kevin/KevinTalk.png"
 #yeri
-image yericharm = "images/yeri/YeriCharm.png"
-image yerismile = "images/yeri/YeriSmile.png"
-image yerifullsmile = "images/yeri/YeriFullSmile.png"
+image yeriangry1 = "images/yeri/YeriAngry.png"
+image yeriangry2 = "images/yeri/YeriAngry2.png"
+image yericheerful = "images/yeri/YeriCheerful.png"
+image yerihappy = "images/yeri/YeriHappy.png"
 image yerinormal = "images/yeri/YeriNormal.png"
-
+image yerisad = "images/yeri/YeriSad.png"
+image yeriscared = "images/yeri/YeriScared.png"
+image yerishy = "images/yeri/YeriShy.png"
+image yerismile = "images/yeri/YeriSmile.png"
+image yerisurprised = "images/yeri/YeriSurprised.png"
+image yeritalk = "images/yeri/YeriTalk.png"
+image yeritsundere1 = "images/yeri/YeriTsundere1.png"
+image yeritsundere2 = "images/yeri/YeriTsundere2.png"
 #citra
 image citra = "images/citra/Citra.png"
 
@@ -52,20 +73,20 @@ define ye_shout = Character("Yeri", what_size=50)
 define ye_whisper = Character("Yeri", what_size=18)
 #ZAKY
 define zk = Character('Zaky')
-define zk_shout = Character("Zaky", what_size=34)
+define zk_shout = Character("Zaky", what_size=50)
 define zk_whisper = Character("Zaky", what_size=18)
 #KEVIN
 define kv = Character('Kevin')
-define kv_shout = Character("Kevin", what_size=34)
+define kv_shout = Character("Kevin", what_size=50)
 define kv_whisper = Character("Kevin", what_size=18)
 #CITRA
 define ct = Character('Citra')
-define ct_shout = Character("Citra", what_size=34)
+define ct_shout = Character("Citra", what_size=50)
 define ct_whisper = Character("Citra", what_size=18)
 #MC
 define en = Character('???')
 define cr = Character('[name]')
-define cr_shout = Character("[name]", what_size=34)
+define cr_shout = Character("[name]", what_size=50)
 define cr_whisper = Character("[name]", what_size=18)
 #Mix
 define kyc = Character("Kevin, Yeri, dan [name]")
@@ -77,6 +98,15 @@ define kyc = Character("Kevin, Yeri, dan [name]")
  
 label start:
 
+    scene bg black
+    with dissolve
+
+    #field name
+    python:
+        name = renpy.input("Siapa namamu: ")
+
+        name = name.strip() or "You"
+
     scene bg its
     with dissolve
 
@@ -86,40 +116,41 @@ label start:
     "Dengan semangat pagi yang membara aku pergi menuju sekolahku."
     "Dari kejauhan aku melihat Kevin sedang berjalan dipinggir jalan."
 
-    show kevin with dissolve
+    show kevinserious with dissolve
 
     en 'Hello Kevin. Bagaimana kabarmu?'
-    kv 'Hai...'
 
-    #field name
-    python:
-        name = renpy.input("Siapa namamu: ")
-
-        name = name.strip() or "You"
+    hide kevinserious
+    show kevincheerful at short_shake, center
 
     kv 'Hai [name], baik kok! bagaimana denganmu?'
     cr 'Baik seperti biasa kok ahahahaha...'
     kv 'Kamu mau menuju sekolah?'
     cr 'Iyalah! Aku sudah memakai pakaian kek gini.'
     cr 'Masak ga pergi sekolah.'
+
+    show kevinhappy at short_shake,center
+
     kv 'Ahahaha... Maaf aku cuma bercanda tadi.'
 
-    hide kevin with dissolve
-
+    hide kevin 
     scene bg outs with dissolve
 
     "Kami berdua berjalan menuju sekolah."
     "Sesampainya disekolah, Kevin mengingatkanku tentang rapat OSIS sehabis pulang sekolah nanti."
 
-    show kevin with dissolve
+    show kevintalk with dissolve
 
-    kv 'Hei... Jangan lupa nanti ya! Sehabis pulang sekolah buat rapat untuk acara Ulang Tahun sekolah kita.'
+    kv 'Eh... Jangan lupa nanti ya! Sehabis pulang sekolah buat rapat untuk acara Ulang Tahun sekolah kita.'
     cr 'Okay... Pasti aku datang kok.'
     cr 'Aku kan anak rajin.'
+
+    hide kevintalk
+    show kevinhappy at short_shake, center
+
     kv 'Heleh ahahahaha.'
 
-    hide kevin with dissolve
-
+    hide kevin
     scene bg insc with dissolve
 
     "Aku menuju ke ruang kelasku."
@@ -128,12 +159,15 @@ label start:
     show yerinormal with dissolve
 
     cr 'Hai Yeri. Bagaimana kabarmu?'
-    hide yerinormal 
-    show yericharm 
+ 
+    hide yerinormal
+    show yerihappy at short_shake, center
+
     ye 'Hai [name], baik kok. Bagaimana denganmu?'
     cr 'Baik kok. Aku ke kelas duluan dulu ya!'
     ye 'Okei!'
-    hide yericharm with dissolve
+
+    hide yeri with dissolve
     #-------
     #bedascene
     scene bg incl with dissolve
@@ -157,24 +191,42 @@ label start:
     "Bel istirahat pun berbunyi."
     "Lalu beberapa saat kemudian Zaky, Yeri, dan Kevin menghampiriku didepan kelasku."
 
-    show kevin at left with dissolve:
-            xalign 0.1
+    show kevinsmile with dissolve:
+            xalign 0.0
             yalign 1.0
-    show yerismile at center with dissolve:
-             
-    show zaky at right with dissolve:
+
+    show zaky with dissolve:
             xalign 0.9
             yalign 1.0
+
+    show yerismile with dissolve
 
     zk 'Hei [name], yuk ke kantin. Mau ga?' 
     ye 'Iya nih... mau ga?'
     
     cr 'Boleh saja sih... Tapi...'
+
+    hide kevinsmile
+    show kevintalk at short_shake:
+        xalign 0.0
+        yalign 1.0
+
     kv 'Ga usah pake tapi-tapian. Ayo gas berangkat.'
+
+    hide kevintalk
+    show kevinserious:
+        xalign 0.0
+        yalign 1.0
+
     cr 'Tapi aku tu males banget coy...'
+
     hide yerismile
-    show yerinormal at center:
+    show yericheerful at short_shake, center
+    
     ye 'Sudahlah ikut saja...'
+
+    hide yericheerful
+    show yerihappy at center
 
     menu:
         "Aku akan ikut.":
@@ -183,22 +235,31 @@ label start:
         "Aku tidak ingin ikut.":
             jump kantin_no
 
-    #--------------------
-    #KE KANTIN(setuju)
-    #-------------------
+#--------------------
+#KE KANTIN(setuju)
+#-------------------
     label kantin_yes:
 
         $ menu_flag = True
 
         cr 'Iya deh aku ikut. Yuk ke kantin.'
-        hide yerinormal
-        show yerismile
+        
+        hide kevinserious
+        show kevincheerful at short_shake:
+            xalign 0.0
+            yalign 1.0
+
         kv 'Nah gitu donk... Lama bet mikirnya dah ni anak.' 
-        ye 'Yokkk berangkat!' 
+
+        hide yerihappy
+        show yericheerful at short_shake, center
+
+        ye "Hahaha"
+        ye 'Yaudah yokkk berangkat!' 
 
         # 3 chara hilang bersamaan
-        hide kevin 
-        hide yerismile 
+        hide kevincheerful
+        hide yericheerful
         hide zaky 
         with dissolve
 
@@ -273,10 +334,10 @@ label start:
         ye 'Ternyata mikirin hal kayak gitu aja.' 
         cr 'Ahahaha... Maaf ya...' 
         hide yerismile
-        show yerifullsmile
+        show yericheerful at short_shake, center
         ye 'Ga apa-apa.' 
         ye 'Kamu harus ikut rapat itu walaupun suka atau engga.'
-        hide yerifullsmile
+        hide yericheerful
         show yerismile
         ye 'Karena rapat itu untuk membahas perayaan ulang tahun sekolah kita.' 
         cr 'Iya aku tau kok.' 
@@ -285,14 +346,14 @@ label start:
          
         "Tak lama kemudian Kevin datang ke tempat dudukku dengan Citra." 
 
-        show kevin with dissolve
+        show kevincheerful with dissolve
 
         kv 'Kalian lagi membahas apa nih?' 
 
-        show kevin with move:
+        show kevincheerful with move:
             xalign 0.3
             yalign 1.0 
-        show yerismile at right with dissolve:
+        show yericheerful at right with dissolve:
             xalign 0.8
             yalign 1.0
 
@@ -300,15 +361,22 @@ label start:
         cr "Iya, ga ada apa-apa."
         kv "Yang bener?"
         
-        hide yerismile
-        show yerinormal at right:
+        hide yericheerful
+        show yeriangry2 at short_shake, right:
             xalign 0.8
             yalign 1.0
 
         ye "Ga ada Kevin..."
+
+        hide kevincheerful
+        show kevinhappy at short_shake:
+            xalign 0.3
+            yalign 1.0
+
+
         kv "Iya deh iya."
-        hide yerinormal
-        hide kevin 
+        hide yeriangry2
+        hide kevinhappy
         with dissolve
 
         "Kevin mulai duduk di kursi meja kantin yang aku duduki."
@@ -328,7 +396,7 @@ label start:
         hide zaky 
         with dissolve
 
-        show kevin with dissolve:
+        show kevinsmile with dissolve:
             xalign 0.3
             yalign 1.0 
         show yerismile at right with dissolve:
@@ -336,7 +404,7 @@ label start:
             yalign 1.0
 
         kyc "Hai Citra..."
-        hide kevin
+        hide kevinsmile
         hide yerismile
         with dissolve
 
@@ -355,13 +423,13 @@ label start:
 
         ct "Baik kok!"
         hide yerismile
-        show yerifullsmile:
+        show yericheerful:
             xalign 0.3
             yalign 1.0 
         ye "Sini kalian berdua ikut duduk!"
         ct "Okeiiii!"
 
-        hide yerifullsmile
+        hide yericheerful
         hide citra
         with dissolve
 
@@ -512,7 +580,6 @@ label start:
         "Aku mengembalikan buku yang kuambil dari ke rak buku."
         "Citra mulai meninggalkan ruangan perpustakaan."
         "Lalu, aku ikut meninggalkan ruangan perpustakaan dan mengikuti Citra."
-
 #---------------
 #INI KE PERPUS(ga setuju) to kantin
 #--------------
@@ -584,18 +651,69 @@ label chapter1_start:
     ye_shout "AH ANJIRLAH"
     ye "sebenarnya aku males banget buat ikut rapat"
 
-    show kevin with dissolve at left
+    show kevin with dissolve:
+        xalign 0.1
+        yalign 1.0
 
     kv "Bentarlah Yeri, belum selesai ni aku ngomongnya.."
 
-    show citra with dissolve at right
+    show citra with dissolve:
+        xalign 0.9
+        yalign 1.0
 
     ct "Hahaha, sabar Yeri.."
-
     ct "Emang resikonya ikut organisasi tu ya gini"
-
     ct "Pulangnya telat mulu"
+    ye "Iyadeh iya, Silahkan kalau mau dilanjut Vin.."
 
-    
+    hide yeriangry 
+    hide citra 
+    with dissolve
+
+    show kevin with move:
+        xalign 0.5
+        yalign 1.0
+
+    kv "Jadi rapat kali ini itu mau membahas tentang acara ulang tahun sekolah kita..."
+
+    "Lalu Kevin menjelaskan sedikit tentang rapat nanti"
+
+    cr "Ouu, lalu kenapa di jadwal itu lama sekali rapatnya?"
+
+    hide kevin with dissolve
+
+    show citra with dissolve:
+        xalign 0.8
+        yalign 1.0
+
+    show yerinormal with dissolve:
+        xalign 0.2
+        yalign 1.0
+
+    ye "Itulah kenapa aku malas ikut rapatnya"
+    ct "Iya nih, dari jam 4 sore sampai jam 8 malam itu lama banget"
+
+    hide citra
+    hide yerinormal 
+    with dissolve
+
+    show zaky with dissolve
+
+    zk "Gini, karena waktunya sudah mepet, maka rapat diadakan selama 4 jam"
+    zk "Jadi rencana Kevin tu mau rapat sekali jalan aja"
+
+    show zaky with move:
+        xalign 0.2
+        yalign 1.0
+
+    show kevin with dissolve
+
+    kv "Iya karena kita dapat dana dari sekolahnya juga baru kemaren malam"
+    kv "Jujur aku juga agak jengkel sama guru Kesiswaannya karena dia nganggep acara ini sepele"
+    kv "Tapi mau gimana lagi, daripada ngeluh terus mending fokus sama event besar ini."
+
+    hide kevin with dissolve
+
+    show yeri
     
 return
