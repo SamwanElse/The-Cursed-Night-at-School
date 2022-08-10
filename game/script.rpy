@@ -68,26 +68,26 @@ image citra = "images/citra/Citra.png"
 # Deklarasikan karakter yang digunakan di game.
 # All chara
 #YERI
-define ye = Character('Yeri')
-define ye_shout = Character("Yeri", what_size=50)
-define ye_whisper = Character("Yeri", what_size=18)
+define y = Character('Yeri')
+define y_shout = Character("Yeri", what_size=50)
+define y_whisper = Character("Yeri", what_size=18)
 #ZAKY
-define zk = Character('Zaky')
-define zk_shout = Character("Zaky", what_size=50)
-define zk_whisper = Character("Zaky", what_size=18)
+define z = Character('Zaky')
+define z_shout = Character("Zaky", what_size=50)
+define z_whisper = Character("Zaky", what_size=18)
 #KEVIN
-define kv = Character('Kevin')
-define kv_shout = Character("Kevin", what_size=50)
-define kv_whisper = Character("Kevin", what_size=18)
+define k = Character('Kevin')
+define k_shout = Character("Kevin", what_size=50)
+define k_whisper = Character("Kevin", what_size=18)
 #CITRA
-define ct = Character('Citra')
-define ct_shout = Character("Citra", what_size=50)
-define ct_whisper = Character("Citra", what_size=18)
+define c = Character('Citra')
+define c_shout = Character("Citra", what_size=50)
+define c_whisper = Character("Citra", what_size=18)
 #MC
-define en = Character('???')
-define cr = Character('[name]')
-define cr_shout = Character("[name]", what_size=50)
-define cr_whisper = Character("[name]", what_size=18)
+define u = Character('???')
+define p = Character('[name]')
+define c_shout = Character("[name]", what_size=50)
+define c_whisper = Character("[name]", what_size=18)
 #Mix
 define kyc = Character("Kevin, Yeri, dan [name]")
 
@@ -118,20 +118,20 @@ label start:
 
     show kevinserious with dissolve
 
-    en 'Hello Kevin. Bagaimana kabarmu?'
+    u 'Hello Kevin. Bagaimana kabarmu?'
 
     hide kevinserious
     show kevincheerful at short_shake, center
 
-    kv 'Hai [name], baik kok! bagaimana denganmu?'
-    cr 'Baik seperti biasa kok ahahahaha...'
-    kv 'Kamu mau menuju sekolah?'
-    cr 'Iyalah! Aku sudah memakai pakaian kek gini.'
-    cr 'Masak ga pergi sekolah.'
+    k 'Hai [name], baik kok! bagaimana denganmu?'
+    p 'Baik seperti biasa kok ahahahaha...'
+    k 'Kamu mau menuju sekolah?'
+    p 'Iyalah! Aku sudah memakai pakaian kek gini.'
+    p 'Masak ga pergi sekolah.'
 
     show kevinhappy at short_shake,center
 
-    kv 'Ahahaha... Maaf aku cuma bercanda tadi.'
+    k 'Ahahaha... Maaf aku cuma bercanda tadi.'
 
     hide kevin 
     scene bg outs with dissolve
@@ -141,14 +141,14 @@ label start:
 
     show kevintalk with dissolve
 
-    kv 'Eh... Jangan lupa nanti ya! Sehabis pulang sekolah buat rapat untuk acara Ulang Tahun sekolah kita.'
-    cr 'Okay... Pasti aku datang kok.'
-    cr 'Aku kan anak rajin.'
+    k 'Eh... Jangan lupa nanti ya! Sehabis pulang sekolah buat rapat untuk acara Ulang Tahun sekolah kita.'
+    p 'Okay... Pasti aku datang kok.'
+    p 'Aku kan anak rajin.'
 
     hide kevintalk
     show kevinhappy at short_shake, center
 
-    kv 'Heleh ahahahaha.'
+    k 'Heleh ahahahaha.'
 
     hide kevin
     scene bg insc with dissolve
@@ -158,14 +158,14 @@ label start:
 
     show yerinormal with dissolve
 
-    cr 'Hai Yeri. Bagaimana kabarmu?'
+    p 'Hai Yeri. Bagaimana kabarmu?'
  
     hide yerinormal
     show yerihappy at short_shake, center
 
-    ye 'Hai [name], baik kok. Bagaimana denganmu?'
-    cr 'Baik kok. Aku ke kelas duluan dulu ya!'
-    ye 'Okei!'
+    y 'Hai [name], baik kok. Bagaimana denganmu?'
+    p 'Baik kok. Aku ke kelas duluan dulu ya!'
+    y 'Okei!'
 
     hide yeri with dissolve
     #-------
@@ -177,10 +177,10 @@ label start:
     
     show zaky with dissolve
 
-    zk 'Woi [name]. Kamu kenapa melamun saja? Apa ada masalah dengan dirimu?'
-    cr 'Tidak kok. Aku cuma bersantai aja.'
-    zk 'Hadeh... Jangan lupa untuk ikut rapat nanti sepulang sekolah ya! Ingat.'
-    cr 'Iya... Santai aja. Aku inget kok.'
+    z 'Woi [name]. Kamu kenapa melamun saja? Apa ada masalah dengan dirimu?'
+    p 'Tidak kok. Aku cuma bersantai aja.'
+    z 'Hadeh... Jangan lupa untuk ikut rapat nanti sepulang sekolah ya! Ingat.'
+    p 'Iya... Santai aja. Aku inget kok.'
 
     hide zaky with dissolve
 
@@ -201,29 +201,29 @@ label start:
 
     show yerismile with dissolve
 
-    zk 'Hei [name], yuk ke kantin. Mau ga?' 
-    ye 'Iya nih... mau ga?'
+    z 'Hei [name], yuk ke kantin. Mau ga?' 
+    y 'Iya nih... mau ga?'
     
-    cr 'Boleh saja sih... Tapi...'
+    p 'Boleh saja sih... Tapi...'
 
     hide kevinsmile
     show kevintalk at short_shake:
         xalign 0.0
         yalign 1.0
 
-    kv 'Ga usah pake tapi-tapian. Ayo gas berangkat.'
+    k 'Ga usah pake tapi-tapian. Ayo gas berangkat.'
 
     hide kevintalk
     show kevinserious:
         xalign 0.0
         yalign 1.0
 
-    cr 'Tapi aku tu males banget coy...'
+    p 'Tapi aku tu males banget coy...'
 
     hide yerismile
     show yericheerful at short_shake, center
     
-    ye 'Sudahlah ikut saja...'
+    y 'Sudahlah ikut saja...'
 
     hide yericheerful
     show yerihappy at center
@@ -242,20 +242,20 @@ label start:
 
         $ menu_flag = True
 
-        cr 'Iya deh aku ikut. Yuk ke kantin.'
+        p 'Iya deh aku ikut. Yuk ke kantin.'
         
         hide kevinserious
         show kevincheerful at short_shake:
             xalign 0.0
             yalign 1.0
 
-        kv 'Nah gitu donk... Lama bet mikirnya dah ni anak.' 
+        k 'Nah gitu donk... Lama bet mikirnya dah ni anak.' 
 
         hide yerihappy
         show yericheerful at short_shake, center
 
-        ye "Hahaha"
-        ye 'Yaudah yokkk berangkat!' 
+        y "Hahaha"
+        y 'Yaudah yokkk berangkat!' 
 
         # 3 chara hilang bersamaan
         hide kevincheerful
@@ -280,7 +280,7 @@ label start:
 
                 $ menu_flag = True
 
-                cr "Aku sangat-" 
+                p "Aku sangat-" 
 
                 
                 jump choice2_done
@@ -289,7 +289,7 @@ label start:
 
                 $ menu_flag = False
 
-                cr "Aku kurang-" 
+                p "Aku kurang-" 
                 jump choice2_done
 
                 label choice2_done:
@@ -306,18 +306,18 @@ label start:
         
 
         show yerinormal with dissolve
-        ye 'Kamu tadi mengapa melamun?' 
-        ye 'Apa yang sedang kamu pikirkan?' 
-        cr 'Ga ada apa-apa sih.' 
-        ye 'Ah boong kamu.'
-        cr 'Beneran kok.'
+        y 'Kamu tadi mengapa melamun?' 
+        y 'Apa yang sedang kamu pikirkan?' 
+        p 'Ga ada apa-apa sih.' 
+        y 'Ah boong kamu.'
+        p 'Beneran kok.'
 
         #hide yerinormal
         #show yerikesal
         "Yeri menatapku dengan tatapan serius dicampur kesal."
         "Akhirnya aku pun menyerah dan memberitahunya apa alasanku melamun tadi."
 
-        cr 'Sebenernya tadi aku merasa.'
+        p 'Sebenernya tadi aku merasa.'
 
         menu:
             "Sangat antusias dengan rapat nanti.":
@@ -330,17 +330,17 @@ label start:
         #hideyerikesal
         hide yerinormal#hilangkan!
         show yerismile
-        ye 'Ya ampun kukira kamu mikirin apaan.' 
-        ye 'Ternyata mikirin hal kayak gitu aja.' 
-        cr 'Ahahaha... Maaf ya...' 
+        y 'Ya ampun kukira kamu mikirin apaan.' 
+        y 'Ternyata mikirin hal kayak gitu aja.' 
+        p 'Ahahaha... Maaf ya...' 
         hide yerismile
         show yericheerful at short_shake, center
-        ye 'Ga apa-apa.' 
-        ye 'Kamu harus ikut rapat itu walaupun suka atau engga.'
+        y 'Ga apa-apa.' 
+        y 'Kamu harus ikut rapat itu walaupun suka atau engga.'
         hide yericheerful
         show yerismile
-        ye 'Karena rapat itu untuk membahas perayaan ulang tahun sekolah kita.' 
-        cr 'Iya aku tau kok.' 
+        y 'Karena rapat itu untuk membahas perayaan ulang tahun sekolah kita.' 
+        p 'Iya aku tau kok.' 
 
         hide yerismile with dissolve
          
@@ -348,7 +348,7 @@ label start:
 
         show kevincheerful with dissolve
 
-        kv 'Kalian lagi membahas apa nih?' 
+        k 'Kalian lagi membahas apa nih?' 
 
         show kevincheerful with move:
             xalign 0.3
@@ -357,16 +357,16 @@ label start:
             xalign 0.8
             yalign 1.0
 
-        ye "Ga ada apa-apa sih."
-        cr "Iya, ga ada apa-apa."
-        kv "Yang bener?"
+        y "Ga ada apa-apa sih."
+        p "Iya, ga ada apa-apa."
+        k "Yang bener?"
         
         hide yericheerful
         show yeriangry2 at short_shake, right:
             xalign 0.8
             yalign 1.0
 
-        ye "Ga ada Kevin..."
+        y "Ga ada Kevin..."
 
         hide kevincheerful
         show kevinhappy at short_shake:
@@ -374,7 +374,7 @@ label start:
             yalign 1.0
 
 
-        kv "Iya deh iya."
+        k "Iya deh iya."
         hide yeriangry2
         hide kevinhappy
         with dissolve
@@ -390,7 +390,7 @@ label start:
             xalign 0.8
             yalign 1.0
         
-        ct "Hai semua..."
+        c "Hai semua..."
 
         hide citra
         hide zaky 
@@ -409,11 +409,11 @@ label start:
         with dissolve
 
         show citra with dissolve
-        ct "Halo..."
+        c "Halo..."
 
         hide citra with dissolve
         show yerismile
-        ye "Bagaimana kabarmu Cit?"
+        y "Bagaimana kabarmu Cit?"
         show yerismile with move:
             xalign 0.3
             yalign 1.0 
@@ -421,13 +421,13 @@ label start:
             xalign 0.8
             yalign 1.0
 
-        ct "Baik kok!"
+        c "Baik kok!"
         hide yerismile
         show yericheerful:
             xalign 0.3
             yalign 1.0 
-        ye "Sini kalian berdua ikut duduk!"
-        ct "Okeiiii!"
+        y "Sini kalian berdua ikut duduk!"
+        c "Okeiiii!"
 
         hide yericheerful
         hide citra
@@ -444,12 +444,12 @@ label start:
     label kantin_no:
 
         $ menu_flag = False
-        cr 'Ga dulu deh. Aku mau ke kamar mandi aja.' 
-        kv 'Yah ga asik lu!' 
-        ye 'Iya nih... Ga asik.' 
-        cr 'Aku bilang ngga ya ngga anjir!' 
-        zk 'Sudah deh biarin aja dia...' 
-        kv 'Yaudah deh... Yuk Yeri Zaky. Kita ke kantin.' 
+        p 'Ga dulu deh. Aku mau ke kamar mandi aja.' 
+        k 'Yah ga asik lu!' 
+        y 'Iya nih... Ga asik.' 
+        p 'Aku bilang ngga ya ngga anjir!' 
+        z 'Sudah deh biarin aja dia...' 
+        k 'Yaudah deh... Yuk Yeri Zaky. Kita ke kantin.' 
 
         hide kevin with dissolve
         hide yeri with dissolve
@@ -469,16 +469,16 @@ label start:
         "Aku ingin mengambil salah satu buku di rak buku." 
         "Saat aku ingin mengambil buku tersebut. Tiba-tiba ada seseorang yang menepuk pundakku dan menyapaku." 
 
-        en '"Halo..."'
+        u '"Halo..."'
 
         show citra with dissolve
 
         "Ternyata itu Citra." 
 
-        cr 'Ahhh Citra. Ada apa?' 
-        ct 'Aku boleh minta tolong ga?' 
-        cr 'Minta tolong apa?'
-        ct 'Tolong ambilin buku itu donk.' 
+        p 'Ahhh Citra. Ada apa?' 
+        c 'Aku boleh minta tolong ga?' 
+        p 'Minta tolong apa?'
+        c 'Tolong ambilin buku itu donk.' 
 
         "Citra menunjuk buku diatas pojok kanan."
 
@@ -491,8 +491,8 @@ label start:
 
                 label choice5_done:
 
-        ct 'Ya ampun... Itu tinggi banget. Ambilin donk.' 
-        cr 'Iya deh iya.'
+        c 'Ya ampun... Itu tinggi banget. Ambilin donk.' 
+        p 'Iya deh iya.'
 
         hide citra with dissolve
 
@@ -503,17 +503,17 @@ label start:
 
         show citra with dissolve
 
-        ct 'Makasih ya!' 
-        cr 'Iya okay...'
-        ct 'Btw... kamu ikut rapat nanti sore ngga?'
-        cr 'Mungkin iya sih... Kan itu wajib untuk anggota OSIS.'
-        cr 'Emang kamu ga mau ikut?'
-        ct 'Bukan begitu.'
+        c 'Makasih ya!' 
+        p 'Iya okay...'
+        c 'Btw... kamu ikut rapat nanti sore ngga?'
+        p 'Mungkin iya sih... Kan itu wajib untuk anggota OSIS.'
+        p 'Emang kamu ga mau ikut?'
+        c 'Bukan begitu.'
 
-        ct 'Aku hanya bertanya saja.'
-        cr 'Baiklah... Btw buku yang kamu baca itu lumayan terkenal ya.'
-        ct 'Iya sih bener... Aku mau baca dulu ya...'
-        cr 'Oke deh...'
+        c 'Aku hanya bertanya saja.'
+        p 'Baiklah... Btw buku yang kamu baca itu lumayan terkenal ya.'
+        c 'Iya sih bener... Aku mau baca dulu ya...'
+        p 'Oke deh...'
 
         hide citra with dissolve
         
@@ -528,14 +528,14 @@ label start:
         "Aku mengambil buku itu dari lantai."
         "Saat aku ingin mengambil buku tersebut ada seseorang yang menepuk pundakku."
 
-        en 'Hei...[name].'
+        u 'Hei...[name].'
 
         show citra with dissolve
 
         "Ah... ternyata itu Citra."
-        cr 'Ada apa Cit?'
-        ct 'Kamu mau ikut ke kantin ga?'
-        cr 'Eh...'
+        p 'Ada apa Cit?'
+        c 'Kamu mau ikut ke kantin ga?'
+        p 'Eh...'
 
         hide citra with dissolve
 
@@ -544,7 +544,7 @@ label start:
         "Padahal beberapa waktu lalu aku menolak ajakan Kevin, Zaky, dan Yeri."
         
         show citra with dissolve
-        ct 'Gimana? Mau ikut?'
+        c 'Gimana? Mau ikut?'
 
         menu:
             "Aduh gimana yah...":
@@ -556,13 +556,13 @@ label start:
                 label choice6_done:
 
        
-        ct 'Ayo donk ikut... Jangan lama-lama mikirnya.'
-        cr 'Tapi tuh, beberapa waktu yang lalu aku diajak ke kantin sama Kevin, Zaky, dan Yeri.'
-        cr 'Tapi aku menolaknya' 
-        ct 'Kok gitu? Kenapa kamu menolaknya?'
-        cr 'Ya... karena aku males buat ikut.'
-        ct 'Nah... Yok ikut sekalian.'
-        ct 'Nanti sekalian juga untuk membahas masalah rapat nanti sore.' 
+        c 'Ayo donk ikut... Jangan lama-lama mikirnya.'
+        p 'Tapi tuh, beberapa waktu yang lalu aku diajak ke kantin sama Kevin, Zaky, dan Yeri.'
+        p 'Tapi aku menolaknya' 
+        c 'Kok gitu? Kenapa kamu menolaknya?'
+        p 'Ya... karena aku males buat ikut.'
+        c 'Nah... Yok ikut sekalian.'
+        c 'Nanti sekalian juga untuk membahas masalah rapat nanti sore.' 
 
         hide citra with dissolve
 
@@ -571,9 +571,9 @@ label start:
 
         show citra with dissolve
 
-        ct 'Gimana?'
-        cr 'Iya deh iya...'
-        ct 'Nah gitu donk...'
+        c 'Gimana?'
+        p 'Iya deh iya...'
+        c 'Nah gitu donk...'
 
         hide citra with dissolve
 
@@ -592,15 +592,15 @@ label start:
 
         show yerinormal with dissolve
 
-        cr "Hai Yeri... Kamu lagi ngapain?"
-        ye "Eh [name]... Kenapa kamu kesini?"
-        ye "Katanya ngga mau ikut ke kantin?"
-        cr "Aku ikut Citra tadi." 
-        cr "Dipaksa tadi sih."
+        p "Hai Yeri... Kamu lagi ngapain?"
+        y "Eh [name]... Kenapa kamu kesini?"
+        y "Katanya ngga mau ikut ke kantin?"
+        p "Aku ikut Citra tadi." 
+        p "Dipaksa tadi sih."
         hide yerinormal 
         show yerismile
-        ye "Ahahahhahaha... Dipaksa."
-        cr "Ya mau gimana lagi."
+        y "Ahahahhahaha... Dipaksa."
+        p "Ya mau gimana lagi."
         hide yerismile with dissolve
         "Saat kita berdua sedang mengobrol datang Kevin, Zaky, dan Citra."
         show kevin at left with dissolve:
@@ -611,14 +611,14 @@ label start:
         show zaky at right with dissolve:
             xalign 0.9
             yalign 1.0
-        kv "Hai... Eh... Ada [name], katanya kamu ga mau ikut ke kantin sama kita."
-        zk "Iya... Kenapa tadi ga mau ikut?"
-        ct "Tadi [name] bareng sama aku dari perpustakaan."
-        zk "Jadi gitu ya."
-        zk "Katanya tadi kamu mau ke kamar mandi."
-        cr "Iya tadi aku ke kamar mandi sih."
-        cr "(Sebenarnya diriku berbohong.)"
-        kv "Begitu ya... Baiklah."
+        k "Hai... Eh... Ada [name], katanya kamu ga mau ikut ke kantin sama kita."
+        z "Iya... Kenapa tadi ga mau ikut?"
+        c "Tadi [name] bareng sama aku dari perpustakaan."
+        z "Jadi gitu ya."
+        z "Katanya tadi kamu mau ke kamar mandi."
+        p "Iya tadi aku ke kamar mandi sih."
+        p "(Sebenarnya diriku berbohong.)"
+        k "Begitu ya... Baiklah."
         hide kevin 
         hide citra 
         hide zaky 
@@ -640,31 +640,31 @@ label chapter1_start:
 
     show kevin with dissolve
 
-    kv "Jangan lupa ya rapat sore nanti."
-    cr "Memangnya kita mau membahas apa saja di rapat nanti?"
-    kv "Rencananya nanti sore pas sepulang sekolah mau ngumpulin semua anggota pengurus OSIS."
+    k "Jangan lupa ya rapat sore nanti."
+    p "Memangnya kita mau membahas apa saja di rapat nanti?"
+    k "Rencananya nanti sore pas sepulang sekolah mau ngumpulin semua anggota pengurus OSIS."
 
     hide kevin with dissolve
 
     show yeriangry at shake, center
 
-    ye_shout "AH ANJIRLAH"
-    ye "sebenarnya aku males banget buat ikut rapat"
+    y_shout "AH ANJIRLAH"
+    y "sebenarnya aku males banget buat ikut rapat"
 
     show kevin with dissolve:
         xalign 0.1
         yalign 1.0
 
-    kv "Bentarlah Yeri, belum selesai ni aku ngomongnya.."
+    k "Bentarlah Yeri, belum selesai ni aku ngomongnya.."
 
     show citra with dissolve:
         xalign 0.9
         yalign 1.0
 
-    ct "Hahaha, sabar Yeri.."
-    ct "Emang resikonya ikut organisasi tu ya gini"
-    ct "Pulangnya telat mulu"
-    ye "Iyadeh iya, Silahkan kalau mau dilanjut Vin.."
+    c "Hahaha, sabar Yeri.."
+    c "Emang resikonya ikut organisasi tu ya gini"
+    c "Pulangnya telat mulu"
+    y "Iyadeh iya, Silahkan kalau mau dilanjut Vin.."
 
     hide yeriangry 
     hide citra 
@@ -674,11 +674,11 @@ label chapter1_start:
         xalign 0.5
         yalign 1.0
 
-    kv "Jadi rapat kali ini itu mau membahas tentang acara ulang tahun sekolah kita..."
+    k "Jadi rapat kali ini itu mau membahas tentang acara ulang tahun sekolah kita..."
 
     "Lalu Kevin menjelaskan sedikit tentang rapat nanti"
 
-    cr "Ouu, lalu kenapa di jadwal itu lama sekali rapatnya?"
+    p "Ouu, lalu kenapa di jadwal itu lama sekali rapatnya?"
 
     hide kevin with dissolve
 
@@ -690,8 +690,8 @@ label chapter1_start:
         xalign 0.2
         yalign 1.0
 
-    ye "Itulah kenapa aku malas ikut rapatnya"
-    ct "Iya nih, dari jam 4 sore sampai jam 8 malam itu lama banget"
+    y "Itulah kenapa aku malas ikut rapatnya"
+    c "Iya nih, dari jam 4 sore sampai jam 8 malam itu lama banget"
 
     hide citra
     hide yerinormal 
@@ -699,8 +699,8 @@ label chapter1_start:
 
     show zaky with dissolve
 
-    zk "Gini, karena waktunya sudah mepet, maka rapat diadakan selama 4 jam"
-    zk "Jadi rencana Kevin tu mau rapat sekali jalan aja"
+    z "Gini, karena waktunya sudah mepet, maka rapat diadakan selama 4 jam"
+    z "Jadi rencana Kevin tu mau rapat sekali jalan aja"
 
     show zaky with move:
         xalign 0.2
@@ -708,12 +708,115 @@ label chapter1_start:
 
     show kevin with dissolve
 
-    kv "Iya karena kita dapat dana dari sekolahnya juga baru kemaren malam"
-    kv "Jujur aku juga agak jengkel sama guru Kesiswaannya karena dia nganggep acara ini sepele"
-    kv "Tapi mau gimana lagi, daripada ngeluh terus mending fokus sama event besar ini."
+    k "Iya karena kita dapat dana dari sekolahnya juga baru kemaren malam"
+    k "Jujur aku juga agak jengkel sama guru Kesiswaannya karena dia nganggep acara ini sepele"
+    k "Tapi mau gimana lagi, daripada ngeluh terus mending fokus sama event besar ini."
 
     hide kevin with dissolve
 
-    show yeri
+    y "Hahaha..."
+    y "Apa yang kamu harapkan dari sekolah ini"
+    y "Memang sih, dari fasilitas dan muridnya itu sangat bergengsi"
+    y "Tapi guru guru disini beberapa ada yang tidak niat untuk menjadi guru dan hanya ingin gajinya saja"
+    c "Heh Yeri, jangan keras keras nanti kedengeran guru lain gimana?"
+    z "Iya nih Yeri kalo ngomong kadang ga dipikir dulu dua kali"
+    y "Halah gapapa, gaada guru disini"
+    y "Toh kalau memang ada guru yang dengar biar dia tersinggung aja"
+    k "Ckckck"
+    k "Yaa beginilah Yeri, emang dari dulu sudah begini"
+    y "Lagipula kita disini cukup ramai juga gaada yang dengar sama pembicaraan kita"
+    y "Kecuali hantu yang bergentayangan disini hahaha.."
+    z "Eh kamu jangan bilang gitu di sekolah ini.."
+    z "Nanti kamu didatengin hantu beneran lo"
+    y "Dih.. mana ada hantu di sekolah ini.." 
+    y "lagipula aku ga percaya sama hal hal begituan"
+    z "Kamu belum pernah dengar rumor ada hantu di sekolah ini?"
+    y "Heee"
+    y "Gimana tuh rumorya??"
+    y "Paling paling cuma pohon keramat atau kamar mandi terkutuk kan.."
+    z "Bukan.."
+    z "Jadi katanya sekolah ini sangat menyeramkan kalau di malam hari"
+    k "Hahaha, bukannya semua sekolah itu memang kesannya menyeramkan kalau di malam hari?"
+    z "Ngga, jadi aku pernah dengar kalau kita itu gaboleh di sekolah sampai malam hari.."
+    z "Katanya sih jika kita berada di sini hingga malam hari nanti akan menghilang dan tidak pernah ditemukan kembali.."
+    z "Makanya jika sekolah ada kegiatan kemah biasanya diadakan diluar sekolah"
+    c "Menurutku yang dikatakan Zaki masuk akal sih.."
+    k "Memangnya pernah ada kasus murid menghilang disini?"
+    z "Belum tau sih, tapi aku denger denger ada orang yang sempat hilang lalu ditemukan kembali.."
+    y_shout "HAHAHAHAHAHA"
+    y "Mana ada murid yang menghilang dan bisa kembali lagi disini.."
+    z "Iya denger denger sih begitu.."
+    z "Kalau beneran ada apa ngga ya aku gatau"
+    p "Memangnya kamu dapat rumor itu darimana Zaki? Kok kamu bisa tau rumor itu"
+    z "Kemarin jam 6 sore, aku baru keluar sekolah karena tugas piket dan sekalian nyelesaiin tugas"
+    z "Lalu saat di gerbang aku gak sengaja denger dua satpam sedang membicarakan tentang sekolah ini saat malam hari"
+    z "Jadi kata salah satu satpam itu.."
+    z "Kalau bisa jangan masuk di sekolah ini pada malam hari"
+    z "Dan jika masi ngeyel kamu bakal menyesal"
+    k "Hahaha, mana mungkin.."
+    z "Iya beneran, aku denger dari telinga ku sendiri, rill no fek"
+    y "Halah, mungkin itu satpamnya yang penakut"
+    k "Mana mungkin.."
+    k "Satpam kan sudah dilatih buat berani"
+    z "Iya bener si.."
+    z "Tapi karena kedua satpam itu membahas itu jadinya aku heran"
+    c "Tapi memangnya kalau disekolah saat malam hari ada hantunya yah?"
+    c "Kan hantu itu tidak nyata"
+    p "Jaman sekarang masi percaya hantu?"
+    y "Bener juga yak, hantu itu tidak nyata.."
+    y "Jadi buat apa takut sama hantu?"
+    z "Kalian semua pemberani ya.."
+    z "Aku nonton film horror, 3 hari gabisa tidur dengan tenang"
+    c "Kalo nonton begituan ma aku juga takut sebenarnya.."
+    c "Tapi yang namanya film itu kan belum tentu nyata"
+    c "Jadi aku masi tetep ga percaya yang namanya hantu.."
+    y "Iyep.. betulll"
+    y "Hantu itu tidak nyata, kayak husbuku aja..."
+    p "Hahahaha"
+    p "Bisa aja kamu, Teri"
+    y_shout "JANGAN PANGGIL AKU TERI, DASAR BODOH!!!"
+    p "kan cuma bercanda Yeri, hahaha"
+    y "Dih, bodolah"
+    c "Udah, sabar Yeri..."
+    c "[name] kan cuma bercanda"
+    z "Hahaha, bercandanya"
+    k "Btw.."
+    k "Perasaan tadi kita lagi membahas rapat osis dah.."
+    k "Kenapa pembahasannya jadi kemana-mana?"
+    p "Iya juga.."
+    p "Jadi gimana? Rapatnya jadi jam 4 sore nanti?"
+    z "Iya, jangan sampe lupa.. apalagi cabut"
+    p "Gaakan cabut aku.."
+    p "Tah aku kan anaknya si paling rajin hehe"
+    y "Iyadeh si paling rajin.."
+    c "Hahaha"
+    c "Eh Yer, sebelum rapat nanti kita ketemuan dulu di depan perpus yaa"
+    c "Aku ada urusan, jadi tolong temani aku.."
+    y "Oke gas"
+    y "Kebetulan aku juga mau meminjam beberapa buku buat ulangan besok"
+    c "Eh mapel apa?"
+    y "Bahasa Jepang"
+    c "Mapel yang cukup sulit yaa"
+    c "Kemarin aku sudah ulangannya"
+    y "Lo kamu sudah ulangan?"
+    c "Iya, kemarin di jam ke tujuh"
+    y "Kok enak sih.. kelasku baru besok loh"
+    y "Oiya.. boleh kali"
+    y "Bocoran soalnya"
+    c "Aduh maaf Yer.."
+    c "Karena ulangannya susah pas aku sudah selesai seketika langsung lupa semua.."
+    y "Ah kamu gaasik"
+    z "Udah-udah daritadi ngerumpi sendiri"
+    p "Iyanih.. women"
+    #bel
+    k "Udah bel tuh, mending kita masuk kelas aja.."
+    k "Ayo [name] kita ke kelas"
+    p "Okeoke"
+    z "Weh, tungguin napa.."
+    z "Aku juga mau bareng ke kelasnya"
+    p "Halah, manja banget lu"
+    z "Bodoamat lah"
+
+    #ch1 selesai(?) (hore(?))
     
 return
