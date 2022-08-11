@@ -816,6 +816,7 @@ label chapter1_start:
     z "Aku juga mau bareng ke kelasnya"
     p "Halah, manja banget lu"
     z "Bodoamat lah"
+    p "hehe"
 
     #ch1 selesai(?) (hore(?))
     
